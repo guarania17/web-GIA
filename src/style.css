@@ -309,6 +309,84 @@ h3,
   line-height: 1.6;
 }
 
+/* View More Button */
+.view-more-container {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.view-more-btn {
+  padding: 18px 60px;
+  font-size: 0.95rem;
+}
+
+/* Service Details Section */
+.service-details-section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.6s ease;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.service-details-section.expanded {
+  max-height: 5000px;
+  opacity: 1;
+  margin-top: 100px;
+}
+
+.details-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.details-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 80px;
+  font-weight: 900;
+}
+
+.details-grid {
+  display: grid;
+  gap: 60px;
+}
+
+.detail-item {
+  border-left: 2px solid var(--accent);
+  padding-left: 40px;
+}
+
+.detail-item h4 {
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+  font-weight: 900;
+}
+
+.detail-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-item li {
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.detail-item li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
 /* Content Sections (Nosotros) */
 .content-section {
   padding: 180px 0;
