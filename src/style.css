@@ -113,22 +113,26 @@ h3,
 }
 
 .logo-text {
-  font-size: 1.25rem;
-  font-weight: 900;
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
   display: flex;
   align-items: center;
+  text-transform: uppercase;
+  gap: 0;
 }
 
 .logo-solid {
   color: var(--accent);
+  font-weight: 800;
 }
 
 .logo-hollow {
   color: transparent;
   -webkit-text-stroke: 1px var(--accent);
-  font-weight: 600;
-  /* Lighter than solid part to allow for visible interior */
-  letter-spacing: 0.1em;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  margin-right: 0.1em;
 }
 
 .nav-links {
