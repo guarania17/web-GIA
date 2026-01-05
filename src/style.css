@@ -126,7 +126,9 @@ h3,
 .logo-hollow {
   color: transparent;
   -webkit-text-stroke: 1px var(--accent);
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  /* Lighter than solid part to allow for visible interior */
+  letter-spacing: 0.1em;
 }
 
 .nav-links {
