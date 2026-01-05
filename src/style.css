@@ -175,7 +175,7 @@ h3,
   font-size: 1.1rem;
   color: var(--text-secondary);
   max-width: 600px;
-  margin-bottom: 56px;
+  margin: 0 auto 56px;
   letter-spacing: 0.02em;
 }
 
@@ -183,6 +183,7 @@ h3,
   display: flex;
   gap: 24px;
   align-items: center;
+  justify-content: center;
 }
 
 .btn-glow {
