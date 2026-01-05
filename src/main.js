@@ -83,31 +83,7 @@ function initScrollReveal() {
   targets.forEach(el => observer.observe(el));
 }
 
-// Handle Form Submission (Placeholder)
-function initContactForm() {
-  const form = document.querySelector('.contact-form');
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button');
-    const originalText = btn.textContent;
-    btn.textContent = 'Enviando...';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      btn.textContent = '¡Mensaje Enviado!';
-      form.reset();
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.disabled = false;
-      }, 3000);
-    }, 1500);
-  });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   initGrid();
   initScrollReveal();
-  initContactForm();
 });
