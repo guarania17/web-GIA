@@ -1,61 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="https://i.ibb.co/fdVR98zT/Guarania-LOGO-PNG.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GuaranIA - Innovación Digital con Raíces</title>
-    <meta name="description" content="Consultoría estratégica en IA, Data y Arquitectura de Infraestructura en Paraguay.">
-  </head>
-  <body>
-    <div id="app">
-      <nav class="glass navbar">
-        <div class="nav-container">
-          <div class="logo-area">
-            <img src="https://i.ibb.co/fdVR98zT/Guarania-LOGO-PNG.png" alt="GuaranIA Logo" class="nav-logo" />
-            <span class="logo-text">Guaran<span class="accent-text">IA</span></span>
-          </div>
-          <div class="nav-links">
-            <a href="#soluciones">Soluciones</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto" class="btn-primary">Contacto</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="https://i.ibb.co/fdVR98zT/Guarania-LOGO-PNG.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GuaranIA - Innovación Digital con Raíces</title>
+  <meta name="description" content="Consultoría estratégica en IA, Data y Arquitectura de Infraestructura en Paraguay.">
+  <!-- Google Fonts: Outfit for a premium Nourd-like feel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app" class="monochrome-theme">
+    <nav class="glass navbar">
+      <div class="nav-container">
+        <div class="logo-area">
+          <img src="https://i.ibb.co/fdVR98zT/Guarania-LOGO-PNG.png" alt="GuaranIA Logo" class="nav-logo" />
+          <span class="logo-text">Guaran<span class="accent-text">IA</span></span>
+        </div>
+        <div class="nav-links">
+          <a href="#soluciones">Soluciones</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto" class="btn-primary">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title animate-in">Innovación Digital con <span class="gradient-text">Raíces Profundas</span>
+          </h1>
+          <p class="hero-subtitle animate-in-delay">Consultoría estratégica en IA, Data y Arquitectura de
+            Infraestructura para el Paraguay del futuro.</p>
+          <div class="hero-actions animate-in-delay-2">
+            <a href="#soluciones" class="btn-glow">Explorar Soluciones</a>
+            <a href="#nosotros" class="btn-outline">Saber Más</a>
           </div>
         </div>
-      </nav>
+        <div class="hero-visual">
+          <div id="bg-canvas"></div>
+        </div>
+      </section>
 
-      <main>
-        <section id="hero" class="hero-section">
-          <div class="hero-content">
-            <h1 class="hero-title animate-in">Innovación Digital con <span class="gradient-text">Raíces Profundas</span></h1>
-            <p class="hero-subtitle animate-in-delay">Consultoría estratégica en IA, Data y Arquitectura de Infraestructura para el Paraguay del futuro.</p>
-            <div class="hero-actions animate-in-delay-2">
-              <a href="#soluciones" class="btn-glow">Explorar Soluciones</a>
-              <a href="#servicios" class="btn-outline">Ver Servicios</a>
+      <section id="soluciones" class="grid-section">
+        <div class="section-header animate-in">
+          <h2 class="section-title">Nuestras Soluciones</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="solutions-grid" id="solutions-grid">
+          <!-- Service cards will be injected by JS -->
+        </div>
+      </section>
+
+      <section id="nosotros" class="content-section">
+        <div class="container">
+          <div class="content-grid">
+            <div class="text-area animate-in">
+              <h2 class="section-title">Nuestra Identidad</h2>
+              <p>En <strong>GuaranIA</strong>, fusionamos la tecnología más avanzada con la identidad paraguaya. Creemos
+                que la inteligencia artificial y los datos son las herramientas que impulsarán la próxima revolución
+                industrial y social de nuestro país.</p>
+              <p>Nuestra misión es empoderar a las empresas locales mediante soluciones de infraestructura robustas y
+                algoritmos inteligentes que hablen nuestro idioma y entiendan nuestra realidad.</p>
+            </div>
+            <div class="image-area animate-in-delay">
+              <div class="logo-symbol-display">
+                <img src="https://i.ibb.co/fdVR98zT/Guarania-LOGO-PNG.png" alt="GuaranIA Symbol" />
+              </div>
             </div>
           </div>
-          <div class="hero-visual">
-            <div class="mesh-container">
-              <!-- Background mesh will be rendered here by JS -->
-            </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="servicios" class="carousel-section">
-          <div class="section-header">
-            <h2 class="section-title">Nuestras Soluciones</h2>
+      <section id="contacto" class="contact-section">
+        <div class="container animate-in">
+          <div class="contact-card glass">
+            <h2 class="section-title">¿Hablamos del futuro?</h2>
+            <p>Estamos listos para llevar tu proyecto al siguiente nivel.</p>
+            <form class="contact-form">
+              <div class="form-group">
+                <input type="text" placeholder="Nombre completo" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email corporativo" required />
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Cuéntanos sobre tu proyecto" rows="4"></textarea>
+              </div>
+              <button type="submit" class="btn-glow">Enviar Mensaje</button>
+            </form>
           </div>
-          <div class="carousel-wrapper">
-            <div class="carousel-track" id="service-track">
-              <!-- Service cards will be injected by JS -->
-            </div>
-          </div>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
 
-      <footer class="glass-footer">
-        <p>&copy; 2026 GuaranIA. Desarrollado con pasión desde Paraguay.</p>
-      </footer>
-    </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="logo-text">Guaran<span class="accent-text">IA</span></span>
+          </div>
+          <p>&copy; 2026 GuaranIA. Desarrollado con pasión desde Paraguay.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

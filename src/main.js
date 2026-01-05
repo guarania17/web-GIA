@@ -43,30 +43,30 @@ const services = [
   }
 ];
 
-const track = document.getElementById('service-track');
+const grid = document.getElementById('solutions-grid');
 
 // Function to create service cards
-function createServiceCard(service) {
+function createServiceCard(service, index) {
   const card = document.createElement('div');
-  card.className = 'service-card glass';
+  card.className = 'service-card animate-in';
+  card.style.transitionDelay = `${index * 0.1}s`;
   card.innerHTML = `
     <div class="service-icon">${service.icon}</div>
     <h3 class="service-title">${service.title}</h3>
     <p class="service-desc">${service.description}</p>
-    <div class="service-glow"></div>
   `;
   return card;
 }
 
-// Initialize carousel with double items for infinite loop
-function initCarousel() {
-  const allServices = [...services, ...services]; // Duplicate for smooth loop
-  allServices.forEach(service => {
-    track.appendChild(createServiceCard(service));
+// Initialize grid
+function initGrid() {
+  if (!grid) return;
+  services.forEach((service, index) => {
+    grid.appendChild(createServiceCard(service, index));
   });
 }
 
-// Simple reveal animation on scroll
+// Simple reveal animation on scroll using Intersection Observer
 function initScrollReveal() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -74,14 +74,40 @@ function initScrollReveal() {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1 });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  });
 
-  document.querySelectorAll('.animate-in, .animate-in-delay').forEach(el => {
-    observer.observe(el);
+  const targets = document.querySelectorAll('.animate-in, .animate-in-delay');
+  targets.forEach(el => observer.observe(el));
+}
+
+// Handle Form Submission (Placeholder)
+function initContactForm() {
+  const form = document.querySelector('.contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button');
+    const originalText = btn.textContent;
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.textContent = '¡Mensaje Enviado!';
+      form.reset();
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }, 3000);
+    }, 1500);
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  initCarousel();
+  initGrid();
   initScrollReveal();
+  initContactForm();
 });
