@@ -77,6 +77,17 @@ const services = [
       'Integración de APIs: Conectar diferentes sistemas (ej. que tu ecommerce hable con tu sistema de logística).',
       'Modernización de Aplicaciones: Actualizar sistemas antiguos ("legacy") a tecnologías modernas y rápidas.'
     ]
+  },
+  {
+    title: 'Automatización de Procesos',
+    description: 'Sistemas inteligentes que trabajan solos para maximizar eficiencia.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>`,
+    details: [
+      'Consultoría en Low-Code/No-Code: Ayudar a las empresas a crear sus propias herramientas internas en semanas, no meses, usando plataformas como Microsoft Power Apps o Appian.',
+      'RPA (Robotic Process Automation): Implementación de bots que realizan tareas administrativas repetitivas (facturación, carga de datos, conciliaciones bancarias).',
+      'Sistemas Multi-Agente: Consultoría para desplegar agentes de IA que coordinan flujos de trabajo completos entre distintos departamentos sin intervención humana.',
+      'Orquestación de Procesos de Negocio (BPM): Digitalizar y optimizar el flujo de aprobaciones y documentos de toda la organización.'
+    ]
   }
 ];
 

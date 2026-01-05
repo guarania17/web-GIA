@@ -318,6 +318,14 @@ h3,
 .view-more-btn {
   padding: 18px 60px;
   font-size: 0.95rem;
+  background: var(--accent);
+  color: var(--primary);
+  border: 1px solid var(--accent);
+}
+
+.view-more-btn:hover {
+  background: transparent;
+  color: var(--accent);
 }
 
 /* Service Details Section */
