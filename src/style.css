@@ -182,6 +182,7 @@ h3,
 .hero-actions {
   display: flex;
   gap: 24px;
+  align-items: center;
 }
 
 .btn-glow {
@@ -194,6 +195,7 @@ h3,
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
   border: 1px solid var(--accent);
+  box-sizing: border-box;
 }
 
 .btn-glow:hover {
@@ -210,6 +212,7 @@ h3,
   text-transform: uppercase;
   letter-spacing: 0.1em;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .btn-outline:hover {
