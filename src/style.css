@@ -113,26 +113,26 @@ h3,
 }
 
 .logo-text {
-  font-family: 'Lexend', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 800;
+  font-family: var(--font-main);
+  font-size: 1.5rem;
+  font-weight: 900;
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  gap: 0;
+  letter-spacing: -0.02em;
+  /* Tighter for a unified logo look */
 }
 
 .logo-solid {
   color: var(--accent);
-  font-weight: 800;
 }
 
 .logo-hollow {
   color: transparent;
-  -webkit-text-stroke: 1px var(--accent);
-  font-weight: 300;
-  letter-spacing: 0.15em;
-  margin-right: 0.1em;
+  -webkit-text-stroke: 1.2px var(--accent);
+  /* Slightly thinner weight to keep internal holes open in A, R, N */
+  font-weight: 800;
+  letter-spacing: 0.05em;
 }
 
 .nav-links {
