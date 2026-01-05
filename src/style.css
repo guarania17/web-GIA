@@ -219,7 +219,7 @@ h3,
 
 /* Grid Section (Solutions) */
 .grid-section {
-  padding: 120px 0;
+  padding: 160px 0;
   background-color: var(--bg-secondary);
 }
 
@@ -232,8 +232,9 @@ h3,
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 16px;
+  font-weight: 900;
 }
 
 .title-underline {
@@ -244,9 +245,8 @@ h3,
 
 .solutions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2px;
-  /* Brutalist grid lines */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
   background: var(--glass-border);
   border: 1px solid var(--glass-border);
   max-width: 1240px;
@@ -255,10 +255,12 @@ h3,
 
 .service-card {
   background: var(--primary);
-  padding: 60px 40px;
-  transition: all 0.4s ease;
+  padding: 80px 40px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   cursor: pointer;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -277,8 +279,8 @@ h3,
 }
 
 .service-icon svg {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   stroke: var(--accent);
   transition: all 0.3s ease;
 }
@@ -292,35 +294,43 @@ h3,
   font-size: 1.1rem;
   margin-bottom: 16px;
   font-weight: 900;
+  min-height: 2.8rem;
+  display: flex;
+  align-items: center;
 }
 
 .service-desc {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Content Sections (Nosotros) */
 .content-section {
-  padding: 140px 0;
+  padding: 180px 0;
 }
 
 .content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 100px;
   align-items: center;
+}
+
+.text-area h2 {
+  margin-bottom: 32px;
 }
 
 .text-area p {
   margin-bottom: 24px;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--text-secondary);
+  line-height: 1.8;
 }
 
 .logo-symbol-display {
   aspect-ratio: 1;
-  background: var(--bg-secondary);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -328,42 +338,56 @@ h3,
 }
 
 .logo-symbol-display img {
-  width: 60%;
+  width: 50%;
   filter: grayscale(1) invert(1);
 }
 
 /* Contact Section */
 .contact-section {
-  padding: 100px 0 160px;
+  padding: 140px 0 200px;
+  background-color: var(--bg-secondary);
 }
 
 .contact-card {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 80px;
+  padding: 100px 40px;
   text-align: center;
 }
 
 .contact-form {
-  margin-top: 48px;
+  margin-top: 64px;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form .form-group:nth-child(3) {
+  grid-column: span 2;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  background: var(--primary);
   border: 1px solid var(--glass-border);
   color: white;
   font-family: var(--font-body);
   outline: none;
+  font-size: 1rem;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--accent);
+}
+
+.contact-form .btn-glow {
+  grid-column: span 2;
+  margin-top: 20px;
 }
 
 /* Footer */
